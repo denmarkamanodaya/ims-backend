@@ -1,0 +1,444 @@
+{
+	"info": {
+		"_postman_id": "59e384f2-946f-49e7-a01e-5bf090485ca1",
+		"name": "IMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9388352"
+	},
+	"item": [
+		{
+			"name": "Get All Subscribers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/dev/ims/subscribers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dev",
+						"ims",
+						"subscribers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Subscribers",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/dev/ims/subscribers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dev",
+								"ims",
+								"subscribers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "access-control-allow-credentials",
+							"value": "true"
+						},
+						{
+							"key": "access-control-allow-headers",
+							"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token"
+						},
+						{
+							"key": "access-control-allow-methods",
+							"value": "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT"
+						},
+						{
+							"key": "vary",
+							"value": "origin"
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "WWW-Authenticate,Server-Authorization"
+						},
+						{
+							"key": "cache-control",
+							"value": "no-cache"
+						},
+						{
+							"key": "content-length",
+							"value": "531"
+						},
+						{
+							"key": "accept-ranges",
+							"value": "bytes"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 22 Oct 2023 13:10:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"requestId\": \"059fbc78-048f-4581-9f10-21cf960c8fb3\",\n    \"data\": [\n        {\n            \"id\": \"3040cca3-417d-4e4b-b273-b752b52e949b\",\n            \"username\": \"16045906403\",\n            \"password\": \"p@ssw0rd!\",\n            \"phoneNumber\": \"18675181010\",\n            \"domain\": \"ims.mnc660.mcc302.3gppnetwork.org\",\n            \"status\": \"ACTIVE\",\n            \"features\": {\n                \"callForwardNoReply\": {\n                    \"destination\": \"tel:+18675182800\",\n                    \"provisioned\": true\n                }\n            }\n        },\n        {\n            \"id\": \"7cece24a-6ff3-4570-b8f7-d32adea72878\",\n            \"username\": \"test2\",\n            \"password\": \"password\",\n            \"phoneNumber\": \"18675181012\",\n            \"domain\": \"test@domain.com\",\n            \"status\": \"ACTIVE\",\n            \"features\": \"XXfeatures\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Specific Subscriber",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/dev/ims/subscriber/:phoneNumber",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dev",
+						"ims",
+						"subscriber",
+						":phoneNumber"
+					],
+					"variable": [
+						{
+							"key": "phoneNumber",
+							"value": "18675181010"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Specific Subscriber",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/dev/ims/subscriber/:phoneNumber",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dev",
+								"ims",
+								"subscriber",
+								":phoneNumber"
+							],
+							"variable": [
+								{
+									"key": "phoneNumber",
+									"value": "18675181010"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "access-control-allow-credentials",
+							"value": "true"
+						},
+						{
+							"key": "access-control-allow-headers",
+							"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token"
+						},
+						{
+							"key": "access-control-allow-methods",
+							"value": "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT"
+						},
+						{
+							"key": "vary",
+							"value": "origin"
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "WWW-Authenticate,Server-Authorization"
+						},
+						{
+							"key": "cache-control",
+							"value": "no-cache"
+						},
+						{
+							"key": "content-length",
+							"value": "345"
+						},
+						{
+							"key": "accept-ranges",
+							"value": "bytes"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 21 Oct 2023 13:18:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"requestId\": \"60da6c3d-a360-4aec-a1f9-81480ddf2a4b\",\n    \"data\": {\n        \"id\": \"3040cca3-417d-4e4b-b273-b752b52e949b\",\n        \"username\": \"16045906403\",\n        \"password\": \"p@ssw0rd!\",\n        \"phoneNumber\": \"18675181010\",\n        \"domain\": \"ims.mnc660.mcc302.3gppnetwork.org\",\n        \"status\": \"ACTIVE\",\n        \"features\": {\n            \"callForwardNoReply\": {\n                \"destination\": \"tel:+18675182800\",\n                \"provisioned\": true\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Put A Subscriber",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test2\",\r\n    \"password\": \"password\",\r\n    \"status\": \"INACTIVE\",\r\n    \"domain\": \"test@domain.com\",\r\n    \"features\": \"XXfeatures\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/dev/ims/subscriber/18675181012",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dev",
+						"ims",
+						"subscriber",
+						"18675181012"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Put A Subscriber",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"test2\",\r\n    \"password\": \"password\",\r\n    \"status\": \"INACTIVE\",\r\n    \"domain\": \"test@domain.com\",\r\n    \"features\": \"XXfeatures\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/dev/ims/subscriber/18675181012",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dev",
+								"ims",
+								"subscriber",
+								"18675181012"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "access-control-allow-credentials",
+							"value": "true"
+						},
+						{
+							"key": "access-control-allow-headers",
+							"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token"
+						},
+						{
+							"key": "access-control-allow-methods",
+							"value": "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT"
+						},
+						{
+							"key": "vary",
+							"value": "origin"
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "WWW-Authenticate,Server-Authorization"
+						},
+						{
+							"key": "cache-control",
+							"value": "no-cache"
+						},
+						{
+							"key": "content-length",
+							"value": "93"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 22 Oct 2023 15:05:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"requestId\": \"ea6d0f7a-ea36-4b9d-acb8-3039d63ae70d\",\n    \"data\": \"SUBSCRIBER_UPDATED\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete A Subscriber",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"testx\",\r\n    \"password\": \"password\",\r\n    \"domain\": \"test@domain.com\",\r\n    \"features\": \"features\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/dev/ims/subscriber/18675181012",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dev",
+						"ims",
+						"subscriber",
+						"18675181012"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete A Subscriber",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"testx\",\r\n    \"password\": \"password\",\r\n    \"domain\": \"test@domain.com\",\r\n    \"features\": \"features\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/dev/ims/subscriber/18675181012",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dev",
+								"ims",
+								"subscriber",
+								"18675181012"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "access-control-allow-credentials",
+							"value": "true"
+						},
+						{
+							"key": "access-control-allow-headers",
+							"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token"
+						},
+						{
+							"key": "access-control-allow-methods",
+							"value": "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT"
+						},
+						{
+							"key": "vary",
+							"value": "origin"
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "WWW-Authenticate,Server-Authorization"
+						},
+						{
+							"key": "cache-control",
+							"value": "no-cache"
+						},
+						{
+							"key": "content-length",
+							"value": "93"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 22 Oct 2023 15:43:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"requestId\": \"82dc579f-a910-40a4-8fc8-7ac89b375b0c\",\n    \"data\": \"SUBSCRIBER_DELETED\"\n}"
+				}
+			]
+		}
+	]
+}
