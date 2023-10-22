@@ -1,0 +1,13 @@
+custom:
+  stage: ${opt:stage, self:provider.stage}
+  projectName: ims
+  resourcesStages:
+    dev: dev
+    uat: uat
+    prod: prod
+  resourcesStage: ${self:custom.resourcesStages.${self:custom.common.stage}, self:custom.common.resourcesStages.dev}
+  memSize:
+    dev: 512
+    uat: 512
+    prod: 1024
+  artifactBucket: ud-${self:custom.common.stage}-${self:custom.common.projectName}-layers-bucket

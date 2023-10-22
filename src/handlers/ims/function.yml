@@ -1,0 +1,31 @@
+ims-get-all-subscribers:
+  handler: src/handlers/ims/get-all-subscribers/v1.handler
+  events:
+    - http:
+        path: /ims/subscribers
+        method: GET
+        cors: true
+
+ims-get-subscriber:
+  handler: src/handlers/ims/get-subscriber/v1.handler
+  events:
+    - http:
+        path: /ims/subscriber/{phoneNumber}
+        method: GET
+        cors: true
+
+ims-put-subscriber:
+  handler: src/handlers/ims/put-subscriber/v1.handler
+  events:
+    - http:
+        path: /ims/subscriber/{phoneNumber}
+        method: PUT
+        cors: true
+
+ims-delete-subscriber:
+  handler: src/handlers/ims/delete-subscriber/v1.handler
+  events:
+    - http:
+        path: /ims/subscriber/{phoneNumber}
+        method: DELETE
+        cors: true
